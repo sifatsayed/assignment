@@ -2,7 +2,7 @@
         function kilometerToMeter(kilometer){
 
             let meter = kilometer*1000;
-            return meter
+            return meter 
         }
         const result = kilometerToMeter(5);
         console.log(result)
@@ -43,20 +43,20 @@
         }
         return hotelRent
         }
-        var output = hotelCost(30);
-        console.log(output)
+        var TotalCost = hotelCost(30);
+        console.log(TotalCost)
         //hotelCost end
 
         //megaName start
         function megaFriend(friends){
-        var megaName = '';
+        var largestName = '';
             for (let i = 0; i < friends.length; i++) {
                 const friend = friends[i];
-                if(friend.length>megaName.length){
-                    megaName = friend
+                if(friend.length>largestName.length){
+                    largestName = friend
                 }
             }
-            return megaName;
+            return largestName;
         }
             var friends = ['Messi','Neymar', 'Ronaldo-CR-7','Ronaldinho','David Beckham' ,'Sakib Al Hasan'];
             var output = megaFriend(friends);
