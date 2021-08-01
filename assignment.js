@@ -1,24 +1,34 @@
         //kilometerToMeter start
         function kilometerToMeter(kilometer){
-
-            let meter = kilometer*1000;
-            return meter 
+            let meter = 0;
+            if(kilometer <0 ){
+                return "Please Enter Your Valid Number"
+            }
+            else{
+                meter = kilometer*1000;
+                return meter;
+            }
         }
-        const result = kilometerToMeter(5);
-        console.log(result)
+        const totalMeter = kilometerToMeter(5);
+        //console.log(totalMeter)
         //kilometerToMeter end
 
 
         //bugetCalculator start
         function bugetCalculator(watch,phone,laptop){
-            var watch = watch*3;
-            var phone = phone*3;
-            var laptop = laptop*3;
-            var grandTotal = watch + phone + laptop;
-            return grandTotal
-        }
-        var output = bugetCalculator(50,100,500); 
-        console.log(output)
+            if (typeof watch != 'number' || watch <0){
+                return "Please Enter Valid Number"
+            }
+            else if(typeof phone != 'number' || phone <0){
+                return "Please Enter Valid Number"
+            }
+            else if(typeof laptop != 'number' || laptop <0){
+                return "Please Enter Valid Number"
+            }
+                return watch*50 + phone*100 + laptop*500
+        }  
+
+        // watch 50$ , phone 100$ , laptop 500$
         //bugetCalculator end
 
 
@@ -43,8 +53,8 @@
         }
         return hotelRent
         }
-        var TotalCost = hotelCost(30);
-        console.log(TotalCost)
+        var output = hotelCost(30);
+        //console.log(output)
         //hotelCost end
 
         //megaName start
@@ -53,12 +63,12 @@
             for (let i = 0; i < friends.length; i++) {
                 const friend = friends[i];
                 if(friend.length>largestName.length){
-                    largestName = friend
+                    megaName = friend
                 }
             }
-            return largestName;
+            return megaName;
         }
             var friends = ['Messi','Neymar', 'Ronaldo-CR-7','Ronaldinho','David Beckham' ,'Sakib Al Hasan'];
             var output = megaFriend(friends);
-            console.log(output)
+           // console.log(output)
             //megaName end
