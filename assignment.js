@@ -35,30 +35,36 @@
         //hotelCost start
         function hotelCost(stayInHotel){
         var hotelRent = 0;
+        var firstTenDaysRent = 0;
+        var secondTenDaysRent = 0;
+        var restOfDays =0;
         if(stayInHotel<=10){
             hotelRent = stayInHotel*100;
         }
         else if(stayInHotel<=20){
-            var firstTenDays = 10*100;
-            var remainingDays = stayInHotel - 10;
-            var secondTenDays = remainingDays*80;
-            hotelRent = firstTenDays + secondTenDays;
+            firstTenDaysRent = 10*100;
+            restOfDays = stayInHotel - 10;
+            secondTenDays = restOfDays*80;
+            hotelRent = firstTenDaysRent + secondTenDaysRent;
         }
         else{
-            var firstTenDays = 10*100;
-            var secondTenDays = 10*80;
-            var remainingDays = stayInHotel - 20;
-            var thirdTenDays = remainingDays*50;
-            hotelRent = firstTenDays + secondTenDays + thirdTenDays;
+            firstTenDaysRent = 10*100;
+            secondTenDaysRent = 10*80;
+            restOfDays = stayInHotel - 20;
+            var thirdTenDaysRent = restOfDays*50;
+            hotelRent = firstTenDaysRent + secondTenDaysRent + thirdTenDaysRent;
         }
         return hotelRent
         }
-        var output = hotelCost(30);
-        //console.log(output)
+        var totalRentOfHotel = hotelCost(30);
+       // console.log(totalRentOfHotel)
         //hotelCost end
 
         //megaName start
         function megaFriend(friends){
+            if(friends.length === 0){
+                return "Please Enter Your valid List Of Array"
+            }
         var largestName = '';
             for (let i = 0; i < friends.length; i++) {
                 const friend = friends[i];
@@ -70,5 +76,5 @@
         }
             var friends = ['Messi','Neymar', 'Ronaldo-CR-7','Ronaldinho','David Beckham' ,'Sakib Al Hasan'];
             var output = megaFriend(friends);
-           // console.log(output)
+            console.log(output)
             //megaName end
