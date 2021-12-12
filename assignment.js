@@ -70,10 +70,10 @@ function megaFriend(friends) {
     for (let i = 0; i < friends.length; i++) {
         const friend = friends[i];
         if (friend.length > largestName.length) {
-            megaName = friend
+            largestName = friend
         }
     }
-    return megaName;
+    return largestName;
 }
 var friends = ['Messi', 'Neymar', 'Ronaldo-CR-7', 'Ronaldinho', 'David Beckham', 'Sakib Al Hasan'];
 var output = megaFriend(friends);
